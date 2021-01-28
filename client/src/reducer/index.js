@@ -50,8 +50,8 @@ export const reducer=(state=initialState,action)=>{
                 ...state,
                 error:'',
                 isLoading:false,
-                accountUpd:false,
-                accounts:action.payload,
+                accountUpd:true,
+                // accounts:action.payload,
         }
         case ADD_ACCOUNT_FAILURE:
             return {
