@@ -1,9 +1,10 @@
 import React,{useState} from 'react';
 import {addAccount} from './action';
 import {connect} from 'react-redux';
+import {useHistory} from 'react-router-dom';
 
 function AddForm(props){
-    
+const history=useHistory();
 const [accounts,setAccounts]=useState({
     name:'',
     budget:0
@@ -18,7 +19,7 @@ const handleSubmit=(e)=>{
     e.preventDefault();
     console.log('submit=',accounts);
     props.addAccount(accounts);
-
+    history.push('/');
 }
 
 return(
